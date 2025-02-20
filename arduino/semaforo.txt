@@ -1,0 +1,54 @@
+/*
+Autor: CKGFM
+Nome do programa: PEDESTRE MALDITO
+Data: 20.02.2025
+*/
+  
+#define pinREDvertical 13
+#define pinREDpeopleHorizontal 12
+#define pinYELLOWvertical 11
+#define pinGREENpeople 10
+#define pinGREENvertical 9
+#define pinREDpeopleVertical 8
+#define pinREDhorizon 7
+#DEFINE pinGREENVertical 6
+#define pinYELLOWhorizon 4
+#define pinGREENhorizon 2
+
+
+
+
+
+void setup()
+{
+  pinMode(pinREDvertical, OUTPUT);
+  pinMode(pinYELLOWvertical, OUTPUT);
+  pinMode(pinGREENvertical, OUTPUT);
+  pinMode(pinGREENhorizon, OUTPUT);  
+  pinMode(pinREDhorizon, OUTPUT);
+  pinMode(pinYELLOWhorizon, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite (pinGREENvertical, HIGH);//verde vertical on
+  digitalWrite(pinREDhorizon, HIGH);//vermelho horizontal on
+  delay (10000);
+  digitalWrite (pinGREENvertical, LOW);//desliga
+  digitalWrite(pinREDhorizon, LOW);
+  delay (100);
+  digitalWrite (pinYELLOWvertical, HIGH);//amarelo vertical on
+  delay (500);
+  digitalWrite (pinYELLOWvertical, LOW);//desliga
+  delay (600);
+  digitalWrite(pinREDvertical, HIGH);//vermelho vertical on
+  digitalWrite (pinGREENhorizon, HIGH);//verde horizontal on
+  delay(10000);
+  digitalWrite(pinREDvertical, LOW);//deliga
+  digitalWrite (pinGREENhorizon, LOW);
+  delay (100);
+  digitalWrite (pinYELLOWhorizon, HIGH);//amarelo horizontal on
+  delay (500);
+  digitalWrite (pinYELLOWhorizon, LOW);//desliga
+
+}
