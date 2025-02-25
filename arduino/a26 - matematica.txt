@@ -1,0 +1,101 @@
+/*Autor: CKGFM
+Nome do programa: DECLARAÇÃO DE VARIÁVEIS GLOBAIS
+Data: 20.02.2025
+Link Tinkercad: https://www.tinkercad.com/things/lxZNrVR6SRZ-a26-matematica/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=xXpF1dNtXxJ4-xxKIeattkE8XsbUiAcbpBEBSBSh-bY
+*/
+
+int numA=10;
+int numB=5;
+int resultado=0;
+float resultadoReal=0;
+float deMenor;
+float deMenor1;
+float deMaior;
+float deMaior1;
+float resul1;
+float resul2;
+void setup()
+{
+  Serial.begin(9600);
+  
+  //soma
+  resultado = numA+numB;
+  Serial.print("A soma do numA com o numB eh: ");
+  Serial.print(resultado);
+  
+  //subtracao
+  resultado = numB - numA;
+  Serial.print("\nA subtracao de numB pelo numA: ");
+  Serial.print(resultado);
+  
+  
+  //multiplicacao
+  resultado = numA * numB;
+  Serial.print("\nA multiplicacao de numA pelo numB: ");
+  Serial.print(resultado);
+  
+  //divisao
+  resultadoReal = (float)numA/(float)numB;
+  Serial.print("\nA divisao de numA por numB: ");
+  Serial.print(resultadoReal, 1);
+  resultado=numA%numB;
+  Serial.print(" e sobra: ");
+  Serial.print (resultado);
+  
+  //potencia
+  resultado=pow(numA,numB);
+  Serial.print("\nnumA elevado a numB: ");
+  Serial.print(resultado);
+  
+  //quadrado
+  resultado=sq(numA);
+  Serial.print("\nnumA elevado ao quadrado: ");
+  Serial.print(resultado);
+  
+  //raiz quadrada
+  resultadoReal=sqrt((float)numA);
+  Serial.print("a raiz quadrada de numA: ");
+  Serial.print(resultadoReal);
+  
+  //modulo
+  resultado=abs(numA*-1);
+  Serial.print("\nO modulo de numA: ");
+  Serial.print(resultado);
+  
+  //restricao
+  
+  resultado=constrain(numA, -3,5);//o numero precisa estar entre o indicado no parenteses
+  
+  
+  //remapeamento
+  resultado=map(numA,0,20,0,10);//map(valor,deMenor,demaior,paramaior)
+  
+  
+  //operadores de atribuicao
+  Serial.print(numA +=5);
+  Serial.print (numA -=5);
+  Serial.print (numA *=5);
+  Serial.print (numA /=5);
+  numA++;
+  Serial.print(numA);
+  ++numA;
+  Serial.print(numA);
+  numA--;
+  Serial.print(numA);
+  --numA;
+  Serial.print(numA);  	
+
+
+  //pq o thigas pediu
+  
+  resultadoReal=((2.00/5.00)+(2*3));
+  Serial.println(resultadoReal);
+  
+  resul1=(deMenor/deMenor1)*100;
+  resul2=(deMaior/deMaior2)*100;
+
+}
+
+void loop()
+{
+}

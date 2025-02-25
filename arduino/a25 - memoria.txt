@@ -1,0 +1,32 @@
+/*
+Autor: CKGFM
+Nome do programa: PEDESTRE MALDITO
+Data: 20.02.2025
+Link tinkercad: https://www.tinkercad.com/things/a6B5Cifypl2-a25-memorie/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=svnawwsm0EGwxrOwjkbeMkQCnKelmz593P3R5OOgQvw
+*/
+
+int variavel = 400;
+String receba = "the power";
+
+void setup()
+{
+  Serial.begin(9600); //e a velocidade do serial
+  Serial.println ("Tamanhos e tipos de variaveis em bytes");
+  Serial.print ("Bool: ");Serial.println(sizeof (bool));//so aceita true e false
+  Serial.print ("Char: ");Serial.println(sizeof (char));//aceita caracteres da tabela ASCIT
+  Serial.print ("Byte: ");Serial.print(sizeof (byte));
+  Serial.print ("int: ");Serial.println(sizeof (int));//-32768 a 32767
+  Serial.print ("Unsigned int: ");Serial.println(sizeof (unsigned int));//0 a 65535
+  Serial.print ("Long: ");Serial.println(sizeof (long));//-2.147.483.648 a 2.147.438.647
+  Serial.print ("Unsigded long: ");Serial.println(sizeof (unsigned long));//0 a 4.294.967.295
+  Serial.print ("Float: ");Serial.println(sizeof (float));
+  //aceita virgula
+  //valor max positivo 3,4028235 x 10^38
+  //valor minimo positivo 1,175494 x 10^-38
+  //valor minimo negativo -1,175494 x 10^-38
+  //valor maximo negativo -3,4028235 x 10^38
+  Serial.print ("Double: ");Serial.println(sizeof (double));//-2.147.483.648 a 2.147.438.647
+}
+
+void loop()
+{}
