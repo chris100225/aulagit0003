@@ -1,0 +1,181 @@
+/*
+Autor: CKGFM
+Nome do programa: E SE...
+Data: 25.02.2025
+Link Tinkercad: https://www.tinkercad.com/things/hi278OZ1Ttf-a27-if-else/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=GeDD9y-Yow6xn6ZsX9iwu8OSaAbHR6PnEZYGQfi1ec0
+*/
+
+
+//operadores de comparacao
+//== verifica se os dois valores sao iguais
+//!= verifica se dois vallores sao diferentes
+//<verifica se era menor que
+//>verifica se e maior que
+//<= verifica se e menor ou igual
+//>= verifica se e maior ou igual
+
+int temp = 28;
+bool portaAberta=true;
+void setup()
+{
+  Serial.begin(9600);
+  if (temp>30){
+  Serial.println("ta calor liga o ar condicionado antes que seja tarde");
+  } else if(temp <30 & temp >24){
+  Serial.println("eu vo p praia");
+  }else if(temp <24 & temp >18){
+  Serial.println("recolha-se em uma cobertinha e seja feliz");
+  }else if(temp < 18 & temp >6){
+  Serial.println("meu deus do ceu");
+  }else{
+    Serial.println("se esconda numa caverna");}
+  
+  if (!portaAberta){
+  Serial.println("fecha a porta >:V");
+  }else{Serial.println("abre a porta");
+       }}
+
+int umidade = 65;
+
+
+void loop()
+{
+}
+
+
+
+________________________________________________________________________________
+/*
+Autor: CKGFM
+Nome do programa: EXERCICIO DAS MAGRAS MAGRAS MAGRAS!
+Data: 25.02.2025
+Link Tinkercad: https://www.tinkercad.com/things/hi278OZ1Ttf-a27-if-else/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=GeDD9y-Yow6xn6ZsX9iwu8OSaAbHR6PnEZYGQfi1ec0
+*/
+String sexo = "feminino";
+float altura = 1.80;
+float peso = 850;
+float imc=0;
+
+void setup()
+{
+  Serial.begin (9600);
+  imc= peso/(altura*altura);
+  
+  if (sexo == "Feminino" or sexo == "feminino"){
+    if (imc <=19){
+    Serial.println("Vamo come antes de sair voando por ai, mona? ta abaixo do peso");
+    }else if(imc >=19 & imc <=23.9){
+    Serial.println("continua assim que ta normal, gata");
+    }else if(imc >=24 & imc<=28.9){
+      Serial.println("vamos manerar no pratao fofa? obesidade leve");
+    }else if(imc >=29 & imc<=38.9){
+      Serial.println("vamos pra nutricionista querida? obesidade moderada");
+    }else{
+      Serial.println("vamos procurar a equipe do quilos mortais baleia? obesidade morbida");
+    }
+  }else{
+    if (imc <=20){
+    Serial.println("Vamo come antes de sair voando por ai camarada? ta abaixo do peso");
+    }else if(imc >=20 & imc <=24.9){
+    Serial.println("continua assim que ta normal campeao");
+    }else if(imc >=25 & imc<=29.9){
+      Serial.println("vamos manerar no pratao fiot? obesidade leve");
+    }else if(imc >=30 & imc<=39.9){
+      Serial.println("vamos pra nutricionista parca? obesidade moderada");
+    }else{
+      Serial.println("vamos procurar a equipe do quilos mortais rolha de poco? obesidade morbida");
+    }
+  
+  }
+  
+  
+}
+
+void loop()
+{
+}
+
+
+
+
+__________________________________________________________________________________________________________
+/*
+Autor: CKGFM
+Nome do programa: EXERCICIO DOS 2MIN
+Data: 26.02.2025
+Link Tinkercad: https://www.tinkercad.com/things/hi278OZ1Ttf-a27-if-else/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=GeDD9y-Yow6xn6ZsX9iwu8OSaAbHR6PnEZYGQfi1ec0
+*/
+
+
+  #define pinTemp 13
+  #define pinBateria 12
+int temp = 20;
+int bateria = 10;
+void setup()
+{
+  Serial.begin(9600);
+  
+  pinMode(pinBateria, OUTPUT);
+  
+  
+  pinMode(pinTemp, OUTPUT);
+  if (temp>30){
+  digitalWrite(pinTemp, HIGH);
+  }else{
+  Serial.println("tudo nos conformes chefia");}
+  
+  
+  
+}
+
+void loop()
+{  
+  if (bateria>20 & bateria<80){
+    digitalWrite(pinBateria, HIGH);
+    delay(1000);
+    digitalWrite(pinBateria, LOW);
+  delay(1000);}
+}
+
+
+
+
+
+____________________________________________________________________________
+/*
+Autor: CKGFM
+Nome do programa: EXERCICIO DOS 2MIN
+Data: 26.02.2025
+Link Tinkercad: https://www.tinkercad.com/things/hi278OZ1Ttf-a27-if-else/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=GeDD9y-Yow6xn6ZsX9iwu8OSaAbHR6PnEZYGQfi1ec0
+*/
+#define pinPar 13
+
+int numero=800;
+int resultado=0;
+int resultadoajustado;
+int par=0;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(pinPar, OUTPUT);
+  resultado=map(numero,0,1023,0,100);
+  resultadoajustado=constrain(resultado, 20,80);
+  
+  if (resultado>20 && resultado<80){
+  Serial.print("O valor ");
+  Serial.print(resultado);
+  Serial.print(" excedeu os limites, valor reajustado para ");
+  Serial.print(resultadoajustado);
+  }
+  
+}
+
+void loop()
+{
+  par=resultadoajustado%2;
+  if(par==0){
+  digitalWrite(pinPar, HIGH);
+  delay(100);
+  digitalWrite(pinPar, LOW);
+  delay(100);}
+}
