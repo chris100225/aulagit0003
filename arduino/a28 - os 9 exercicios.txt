@@ -1,0 +1,108 @@
+/*
+Autor: CKGFM
+Nome do programa: EXERCICIO DOS 2MIN
+Data: 26.02.2025
+Link Tinkercad: https://www.tinkercad.com/things/b1gWadbuTND/editel?returnTo=%2Fdashboard&sharecode=4-fejGS2aKJa9y6NIraaApirzRcjZKfDXSpZ-kpCw0g
+*/
+
+//int num = -5;
+//________________________________//
+//String nome = "Sergio Gofuete";
+//String cargo = "Zelador";
+//float salario = 7000;
+//float porcentagem=0;
+//float ajustado=0;
+//________________________________//
+//String nome = "Sergio Gofuete";
+//float salario=200;
+//float porcentagem=0;
+//float ajustado=0;
+//_________________________________//
+//float num1 = 2;
+//float num2 = 4;
+//_________________________________//
+float nota1=5;
+float nota2=6;
+float nota3=10;
+float nota4=0;
+float media=0;
+String nome="Sergio Gofuete";
+void setup()
+{
+    Serial.begin(9600);
+/*
+  if (num >0){
+  Serial.println("Seu numero e positivo");
+  }else if (num<0){
+  Serial.println("Seu numero e negativo");}
+*/
+  
+//______________________________________________//  
+  
+/*  if (salario<1000){ 
+  porcentagem=salario*10/100;
+  ajustado=salario+porcentagem;
+    Serial.print ("Nome: ");Serial.println(nome);
+    Serial.print ("Cargo: ");Serial.println(cargo);
+    Serial.print ("Salario reajustado: ");Serial.println(ajustado);
+  }else{
+    Serial.print ("Nome: ");Serial.println(nome);
+    Serial.print ("Cargo: ");Serial.println(cargo);
+    Serial.print ("Salario: ");Serial.println(salario);
+  }
+*/  
+  
+//__________________________________________________//
+/* 
+  if (salario<500){
+  porcentagem=salario*30/100;
+  ajustado=salario+porcentagem;
+  
+    Serial.print ("Nome: ");Serial.println(nome);
+    Serial.print ("Salario reajustado: ");Serial.println(ajustado);
+  }else{
+    Serial.print ("Nome: ");Serial.println(nome);
+    Serial.print ("Salario: ");Serial.println(salario);  
+    }
+*/
+//__________________________________________________//
+  
+/*  if (num1>num2){
+  Serial.print("o primeiro valor e maior.");
+  }else{
+  Serial.print("o segundo valor e maior.");
+  }
+*/
+//__________________________________________________//
+  
+  media=nota1+nota2+nota3+nota4;
+  media=media/4;
+  if (media>=7){
+    Serial.print("Nome do aluno: ");Serial.print(nome);
+    Serial.print("\nNota primeiro bimestre: ");Serial.print(nota1);
+    Serial.print("\nNota segundo bimestre: ");Serial.print(nota2);
+    Serial.print("\nNota terceiro bimestre: ");Serial.print(nota3);
+    Serial.print("\nNota quarto bimestre: ");Serial.print(nota4);
+    Serial.print("\nMedia geral: ");Serial.print(media);
+    Serial.print("\nAPROVADO");
+  }else if(media >5 && media <7){
+    Serial.print("Nome do aluno: ");Serial.print(nome);
+    Serial.print("\nNota primeiro bimestre: ");Serial.print(nota1);
+    Serial.print("\nNota segundo bimestre: ");Serial.print(nota2);
+    Serial.print("\nNota terceiro bimestre: ");Serial.print(nota3);
+    Serial.print("\nNota quarto bimestre: ");Serial.print(nota4);
+    Serial.print("\nMedia geral: ");Serial.print(media);
+    Serial.print("\nRECUPERACAO");  
+  }else{
+    Serial.print("Nome do aluno: ");Serial.print(nome);
+    Serial.print("\nNota primeiro bimestre: ");Serial.print(nota1);
+    Serial.print("\nNota segundo bimestre: ");Serial.print(nota2);
+    Serial.print("\nNota terceiro bimestre: ");Serial.print(nota3);
+    Serial.print("\nNota quarto bimestre: ");Serial.print(nota4);
+    Serial.print("\nMedia geral: ");Serial.print(media);
+    Serial.print("\nREPROVADO");
+  }
+}
+void loop()
+{
+}
