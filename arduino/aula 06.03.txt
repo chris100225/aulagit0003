@@ -1,0 +1,29 @@
+/*
+Autor: CKGFM
+Nome do programa: REVISAO
+Data: 06.03.2025
+Link Tinkercad: https://www.tinkercad.com/things/4Nd9jD49WhF/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=5XakGXiUNWxaTROy4Ti4H2o7T7SoTSumMDuSmqzLek0
+*/
+#define ledAzul 13
+unsigned long tempoms = 0;
+unsigned long tempoinicial = 0;
+int pisca = 1000;
+bool estadoled = false;
+void setup()
+{Serial.begin(9600);
+ 
+ pinMode(ledAzul, OUTPUT);
+ 
+}
+
+void loop()
+{
+  
+  tempoms = millis();
+  if(tempoms - tempoinicial >= pisca){
+  estadoled =!estadoled;
+  tempoinicial = tempoms;
+  }
+  digitalWrite (ledAzul, estadoled);
+
+}
