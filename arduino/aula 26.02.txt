@@ -1,0 +1,86 @@
+/*
+Autor: CKGFM
+Nome do programa: EXERCICIO DOS 2MIN
+Data: 26.02.2025
+Link Tinkercad: https://www.tinkercad.com/things/5a5UVT1wEOW/editel?returnTo=%2Fdashboard&sharecode=Ba8qhJiTpTVZh0MkNMhkZILwnpmuIUYVPxt60MPkcJo
+*/
+#define pin1 13
+#define pin2 12
+#define pin3 11
+#define pin4 10
+#define pin5 9
+
+//int DiadaSemana=2;
+//___________________//
+int ledEscolhido=2;
+
+
+void setup()
+{Serial.begin(9600);
+ 
+/* switch(DiadaSemana){
+ case 1:
+   Serial.println("Segunda");
+ break;
+ case 2:
+   Serial.println("terca");
+ break;
+ case 3:
+   Serial.println("quarta");
+ break;
+ case 4:
+   Serial.println("quinta");
+ break;
+ case 5:
+   Serial.println("sexta");
+ break;
+ case 6:
+   Serial.println("sabado");
+ break;
+ case 7:
+   Serial.println("domingo");
+ break;
+ 
+ default: 
+ //opcao invalida
+   break;
+ }
+ */
+ 
+ //_______________________________________//
+ pinMode(pin1, OUTPUT);
+ pinMode(pin2, OUTPUT);
+ pinMode(pin3, OUTPUT);
+ pinMode(pin4, OUTPUT);
+ pinMode(pin5, OUTPUT);
+ 
+ 
+ switch(ledEscolhido){
+ case 1:
+  digitalWrite(pin1, HIGH);
+   break;
+   
+ case 2:
+  digitalWrite(pin2, HIGH);
+   break;
+   
+ case 3:
+  digitalWrite(pin3, HIGH);
+   break;
+   
+ case 4:
+  digitalWrite(pin4, HIGH);
+   break;
+   
+ case 5:
+  digitalWrite(pin5, HIGH);
+   break;
+   
+   default: 
+   Serial.println("Coloca um numero certo bobao");
+ }
+}
+
+void loop()
+{
+}
